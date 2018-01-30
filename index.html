@@ -3,49 +3,167 @@
 <head>
 	<title>Himasi</title>
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<link rel="stylesheet" type="text/css" href="css/jquery.pagepiling.css"/>
+	<link rel="stylesheet" type="text/css" href="css/onepage-scroll.css">
+	<!--<link rel="stylesheet" type="text/js"  href="js/scroll to top.js">-->
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Open+Sans">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {packages:["orgchart"]});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Name');
+        data.addColumn('string', 'Manager');
+        data.addColumn('string', 'ToolTip');
+
+        // For each orgchart box, provide the name, manager, and tooltip to show.
+        data.addRows([
+          [{v:'Mike', f:'Mike<div style="color:red; font-style:italic">President</div>'},
+           '', 'The President'],
+          [{v:'Jim', f:'Jim<div style="color:red; font-style:italic">Vice President</div>'},
+           'Mike', 'VP'],
+          ['Alice', 'Mike', ''],
+          ['Bob', 'Jim', 'Bob Sponge'],
+          ['Carol', 'Bob', '']
+        ]);
+
+        // Create the chart.
+        var chart = new google.visualization.OrgChart(document.getElementById('chart_div'));
+        // Draw the chart, setting the allowHtml option to true for the tooltips.
+        chart.draw(data, {allowHtml:true});
+      }
+   </script>
+
 
 </head>
 <body>
-<!--<div >
-    <div>
-        <ul>
-	        <li><a>Section 1</a></li>
-	        <li><a>Section 2</a></li>
-	        <li><a>Section</a></li>
-        </ul>
-    </div>
-</div>
--->
-<div id="pagepiling">
-<div id="section1" class="section">
-	  <h1>Section 1</h1>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-<div id="section2" class="section">
-	  <h1>Section 2</h1>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-<div id="section3" class="section">
-	  <h1>Section 3</h1>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-<div id="section4" class="section">
-	  <h1>Section 4 Submenu 1</h1>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-	  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
+
+<nav class="fixed-nav-bar">
+  	<ul class="ul">
+	  	
+	  		<li class="li"><a href="#">About</a></li>
+	  		<li class="li"><a href="#">Contact Me</a></li>
+	  		<li class="li"><a href="#">News</a></li>
+	  		<li class="li"><a href="#">Home</a></li>
+		
+	</ul>
+</nav>
+
+<div class="main">
+	<section id="section1">
+		<center>
+			<h1 class="h1 animated fadeInDown">Selamat Datang di HIMASI</h1>
+		</center>
+		<center>
+		<div class="logo-tengah animated fadeInUp">
+			<img src="img/logo-trilogi.png">
+		</div>
+		</center>
+	</section>
+	<section  id="section2">
+		<div class="column">
+			<button class="hvr-wobble-bottom"><h1>Apa itu HIMASI</h1></button>
+			<p class ="adalah warna" > HIMASI adalah suatu organisasi kemahasiswaan Sistem Informasi Universitas Trilogi. HIMASI ini dibentuk atas kesepakatan bersama seluruh elemen di lingkungan Program Studi Sistem Informasi Universitas Trilogi pada tahun 2015.
+			HIMASI dibentuk dengan tujuan untuk mewadahi seluruh aspirasi, dan inovasi mahasiswa Sistem Informasi guna meningkatkan kontribusi mahasiswa Stem Informasi dalam bidang keilmuan. 
+			</p>
+		</div>
+		<div class="column">
+			<button class="hvr-wobble-bottom"><h1>VISI HIMASI</h1></button>
+			<p class="warna adalah" >Sebagai wadah mahasiswa/i Program Studi Sistem Informasi Universitas Trilogi dalam menumbuhkembangkan bakat sehingga menjadikan mahasiswa/i yang inovatif di bidang Sistem Informasi.</p>
+		</div>
+		<div class="column">
+		<button class="hvr-wobble-bottom"><h1>MISI HIMASI</h1></button>
+		<ol class="misi warna adalah" type="1"  >
+			<li>Melaksanakan program kerja yang dapat menjadi wadah penyaluran bakat mahasiswa/i Program Studi Sistem Informasi Universitas Trilogi.</li>
+			<li>Membantu memberikan fasilitas untuk menunjang kegiatan mahasiswa/i Program Studi Sistem Informasi Universitas Trilogi.</li>
+			<li>Mengadakan kegiatan-kegiatan yang dapat meningkatkan kopetensi mahasiswa/i Program Studi Sistem Informasi Universitas Trilogi.</li>
+			<li>Mengadakan kegiatan-kegiatan sosial sebagai wujud pengabdian kepada masyarakat.</li>
+			<li>Menjalin hubungan kerjasama yang baik dengan pihak internal maupun eksternal HIMASI.</li>
+		</ol>	
+
+		</div>
+	</section>
+	<section id="section3">
+	
+	<div class="animated fadeInUp">
+		<img src="img/logo tulisan.png" class="img1">
+		<p class="pengertian-logo">Tulisan HIMASI yang bertuliskan tebal atau bold memiliki arti bahwa HIMASI memiliki tekad yang kuat dengan hati yang teguh dalam berkomitmen serta bertanggung jawab sepenuhnya atas keberlangsungan organisasi.</p>
+	</div>	
+	
+	<div>
+		<img src="img/kanan.png" class="img2"> 
+		<p class="pengertian-logo">
+		Garis yang berjumlah ganjil sebanyak 3 garis dan mengarah keatas memiliki arti sebagai gambaran dari visi Universitas Trilogi yaitu Teknopreneur, Kolaborasi, dan Kemandirian.
+		</p>
+	</div>
+	
+	<div>
+		<img src="img/kiri.png" class="img3">
+		<p class="pengertian-logo">Garis yang berjumlah ganjil sebanyak 3 garis dan mengarah kebawah yang melambangkan loyalitas, komitmen dan tekad.</p>
+	</div>
+	
+	</section>
+	<section id="section4">
+	   <div id="chart_div"></div>
+
+	</section>
+	<section id =  "section5">
+		<p>
+			PETUNJUK STRUKTUR ORGANISASI<br>
+			HIMPUNAN MAHASISWA SISTEM INFORMASI<br>
+		</p>
+			<p> <br>
+				A.	KETUA <br>
+					1.	Menjalankan Anggaran Dasar dan Anggaran Rumah Tangga.<br>
+					2.	Menentukan kebijakan umum organisasi.<br>
+					3.	Mengendalikan organisasi.<br>
+					4.	Melakukan evaluasi kegiatan Himpunan Mahasiswa Jurusan Sistem Informasi Fakultas Industri Kreatif dan  
+					    Telematika Universitas Trilogi 3 bulan sekali.
+            </p>
+
+            <p> 
+            	5.	Mempertimbangkan dan menyetujui tentang keluar / masuk keuangan Himpunan Mahasiswa Jurusan Sistem Informasi Fakultas Industri Kreatif dan Telematika Universitas Trilogi <br>
+				6.	Bertanggungjawab terhadap pelaksanaan program kerja yang telah ditetapkan dalam Musyawarah Mahasiswa<br>
+				7.	Bertanggungjawab dan mengkoordinir jalannya semua kegiatan ke dalam dan keluar Himpunan Mahasiswa Jurusan Sistem Informasi Fakultas Industri Kreatif dan Telematika Universitas Trilogi<br>
+				8.	Mempertanggungjawabkan kepengurusannnya kepada Musyawarah  Mahasiswa<br>
+				9.	Dalam keadaan terdesak Ketua adalah pemegang kekuasaan tertinggi  dalam kegiatan Himpunan Mahasiswa Jurusan Sistem Informasi Fakultas Industri Kreatif dan Telematika Universitas Trilogi<br>
+			</p>
+					<p>   <br>
+						B.	SEKRETARIS<br>
+				1.	Membantu tugas ketua dalam bidang administrasi<br>
+				2.	Menampung dan menyampaikan aspirasi anggota Himpunan Mahasiswa Jurusan Sistem Informasi Fakultas Industri Kreatif dan   Telematika Universitas Trilogi<br>
+				3.	Bertanggung jawab dan mengkoordinir jalannya semua kegiatan ke dalam Himpunan Mahasiswa Jurusan Sistem Informasi Fakultas Industri Kreatif dan Telematika Universitas Trilogi<br>
+				4.	Menjalankan tugas ketua apabila ketua dan wakil ketua berhalangan<br>
+				 	</p>
+			<p>  <br> 
+				C.	BENDAHARA<br>
+					1.	Mengelola dan menangani keuangan organisasi atas persetujuan ketua<br>
+					2.	Membuat rancangan anggaran berdasarkan rencana anggaran yang diajukan secara keseluruhan<br>
+			</p> <br>
+
+				<p> 
+				D.	DIVISI-DIVISI<br>
+					1.	Melaksanakan program kerja yang telah ditetapkan dalam Musyawarah Mahasiswa yang telah disetujui oleh semua pengurus HIMASI<br>
+					2.	Membentuk unit divisi dan kepanitiaan untuk memperlancar pelaksanaan program kerja<br>
+					3.	Mempertanggungjawabkan pelaksanaan program kerja yang telah di laksanakan<br>
+				</p>
+
+	</section>
+
 </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script type="text/javascript" src="js/jquery.pagepiling.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.0/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.onepage-scroll.js"></script>
+<script type="text/javascript" src="js/scrollreveal.js" ></script>
+<script type="text/javascript" src="js/jquery.viewportchecker.js"></script>
 <script type="text/javascript">
-$(document).ready(function() {
-	$('#pagepiling').pagepiling();
-});
+		$(".main").onepage_scroll();
 </script>
+<script type="text/javascript">
+
+</script>
+
 </body>
 </html>
