@@ -58,18 +58,21 @@ a{
 #section4 {
     color: #fff; 
     background-color: #00bcd4;
-    padding-bottom: : 50px;
-    text-align:center;
+    position: relative;
 } 
 
 #section5 {
-    color: #fff; 
+    color: #000; 
     background-color: #00bcd4;
     padding-bottom: : 50px;
     text-align:center;
     border-style    :  double;
     border-bottom   :  solid;
     font-family:"Comic Sans MS", cursive, sans-serif;
+    background-image: url("../img/test.jpg");
+    background-size: auto;
+    background-repeat: no-repeat;
+ 
  
 } 
 
@@ -105,7 +108,7 @@ a{
     display: none;
 }
 
-button {
+.tombol {
   border-radius: 4px;
   background-color: #616161;
   border: none;
@@ -147,6 +150,13 @@ button {
 .hvr-wobble-bottom:hover + .warna {
 display: inherit;
 }
+
+.struktur{
+    margin-top: 60px;
+    margin-left: 20px;
+}
+
+
 @-webkit-keyframes hvr-wobble-bottom {
   16.65% {
     -webkit-transform: translateY(8px);
@@ -173,6 +183,7 @@ display: inherit;
     transform: translateY(0);
   }
 }
+
 @keyframes hvr-wobble-bottom {
   16.65% {
     -webkit-transform: translateY(8px);
@@ -199,6 +210,7 @@ display: inherit;
     transform: translateY(0);
   }
 }
+
 .hvr-wobble-bottom {
   display: inline-block;
   vertical-align: middle;
@@ -217,3 +229,25 @@ display: inherit;
   animation-iteration-count: 1;
 }
 
+
+div.gallery {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: left;
+    width: 180px;
+    margin-top: 50px;
+}
+
+div.gallery:hover {
+    border: 1px solid #777;
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
